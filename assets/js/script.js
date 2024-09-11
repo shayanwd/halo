@@ -11,3 +11,32 @@ gsap.ticker.add((time) => {
 })
 
 gsap.ticker.lagSmoothing(0)
+
+
+
+
+
+
+
+Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+});
+
+
+function homeMousemove(params) {
+    const hero = document.querySelector(".main-banner-sec")
+    const mover = document.getElementById("move")
+    if (hero && mover) {
+        document.addEventListener("mousemove", (dets) => {
+            gsap.to(mover, {
+                left: `${dets.x}px`,
+                top: `${dets.y}px`
+            })
+        })
+    }
+
+}
+
+
+
+homeMousemove()
