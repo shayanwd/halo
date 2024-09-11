@@ -25,6 +25,9 @@ function homeMousemove() {
     const hero = document.querySelector(".main-banner-sec")
     const mover = document.getElementById("move")
     if (hero && mover) {
+        window.addEventListener("DOMContentLoaded", () => {
+            hero.classList.add("animate")
+        })
         document.addEventListener("mousemove", (dets) => {
             gsap.set(mover, {
                 left: `50%`,
@@ -71,7 +74,6 @@ function homeMousemove() {
     }
 
 }
-
 
 
 homeMousemove()

@@ -23,6 +23,10 @@ html {
     border-radius: 10px;
 }
 
+::selection {
+    background: #ff5e2b;
+    color: #000;
+}
 
 @font-face {
     font-family: 'Nuckle';
@@ -78,6 +82,8 @@ h6 {
 
 img {
     max-width: 100%;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 body {
@@ -143,7 +149,7 @@ html.lenis body {
     top: 0;
     right: 0;
     position: absolute;
-    padding: 40px 0px 20px;
+    padding: 40px calc(1.8778vw - 25px*0.066) 20px;
     z-index: 10;
 }
 
@@ -355,6 +361,64 @@ html.lenis body {
 
 
 
+/* Fancybox fixes */
+.fancybox__slide.has-close-btn {
+    padding: 0px !important;
+    justify-content: center;
+}
+
+.fancybox__slide::before,
+.fancybox__slide::after {
+    display: none;
+}
+
+.fancybox__slide button.f-button.is-close-btn {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: #FF5E2B;
+    opacity: 1;
+    height: 40px;
+    width: 40px;
+}
+
+.fancybox__slide button.f-button.is-close-btn svg {
+    fill: #000 !important;
+    stroke: #000;
+    width: 16px !important;
+    height: 16px;
+}
+
+.fancybox__slide button.f-button.is-close-btn:hover {
+    background: #fff;
+}
+
+.fancybox__slide.has-close-btn .fancybox__content {
+    width: 100% !important;
+    aspect-ratio: auto !important;
+    height: 100% !important;
+}
+
+.fancybox__slide.has-close-btn .fancybox__content video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.fancybox__backdrop {
+    background: #000 !important;
+    opacity: 1 !important;
+}
+
+.has-map .fancybox__content,
+.has-pdf .fancybox__content,
+.has-youtube .fancybox__content,
+.has-vimeo .fancybox__content,
+.has-html5video .fancybox__content {
+    background: #000 !important;
+}
+
+
 
 
 
@@ -366,14 +430,17 @@ html.lenis body {
     min-height: 100vh;
     background: #0A0A0A;
     clip-path: inset(0 0);
-    clip-path: inset(0.625rem round 8px);
     transition: clip-path 0.8s;
     z-index: 1;
     display: flex;
     align-items: flex-end;
-    padding: 1.625rem calc(2.7778vw - 25px*0.066) 1.625rem;
+    padding: 1.625rem calc(1.8778vw - 25px*0.066) 2.625rem;
     animation: clip 1s cubic-bezier(0.22, 0.2, 0.29, 1.05);
-    animation-delay: 0.3s;
+    animation-delay: 1s;
+}
+
+.main-banner-sec.animate {
+    clip-path: inset(0.625rem round 8px);
 }
 
 @keyframes clip {
@@ -419,7 +486,7 @@ html.lenis body {
 .bcr-col2 h1 {
     color: #fff;
     font-size: 57px;
-    line-height: 57px;
+    line-height: 37px;
     font-weight: 500;
 }
 
@@ -824,4 +891,523 @@ html.lenis body {
     max-width: 470px;
     margin-left: auto;
     object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Latest News Sec */
+
+
+.latest-news-sec {
+    width: 100%;
+    padding-top: 7.5rem;
+    padding-bottom: 5rem;
+}
+
+.latest-news-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.latest-news-title h2 {
+    font-size: 68px;
+    line-height: 68px;
+    font-weight: 500;
+    color: #000;
+}
+
+.btn-outlined {
+    background: transparent;
+    border: 1px solid #000;
+}
+
+.btn-outlined:hover {
+    border-color: transparent;
+}
+
+.latest-news-wrap {
+    width: 100%;
+    margin-top: 3.75rem;
+}
+
+.latest-news-cell {
+    width: 100%;
+    position: relative;
+    transition: all 0.3s;
+    background: transparent;
+}
+
+.ln-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.8fr 1fr 1fr 100px;
+    padding: 1.875rem 0px;
+    gap: 20px;
+}
+
+.ln-grid>a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 1;
+}
+
+.ln-grid::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: calc(100% - 30px);
+    max-width: 1550px;
+    margin: 0 auto;
+    border-top: 1px solid #000;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: all 0.3s;
+}
+
+.ln-image {
+    width: 100%;
+}
+
+.ln-image img {
+    width: 70%;
+    max-width: 448px;
+    display: block;
+    object-fit: cover;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.ln-title {
+    width: 100%;
+}
+
+.ln-title h3 {
+    font-size: 30px;
+    line-height: 33px;
+    font-weight: 500;
+    color: #000;
+}
+
+.ln-txt {
+    width: 100%;
+}
+
+.ln-txt p {
+    font-size: 17px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #000;
+    max-width: 348px;
+}
+
+.ln-go {
+    margin-left: auto;
+    pointer-events: none;
+}
+
+.ln-go .site-btn.btn-sq {
+    background: #fff;
+    color: #000;
+}
+
+.ln-go .site-btn.btn-sq svg {
+    transform: rotate(-45deg);
+}
+
+.latest-news-cell:hover .ln-go .site-btn.btn-sq {
+    background-color: #FF5E2B;
+}
+
+.latest-news-cell:hover {
+    background: #FAF8F7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Newsletter Sec */
+
+.newsletter-sec {
+    width: 100%;
+    padding: 7.5rem 0px;
+    background: #fff;
+}
+
+.newsletter-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 40%;
+    gap: 30px;
+}
+
+.nws-col2 {
+    width: 100%;
+}
+
+.nws-col1 h2 {
+    font-size: 68px;
+    line-height: 68px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.nws-col2 form {
+    position: relative;
+    max-width: 470px;
+    margin-left: auto;
+}
+
+.nws-col2 form .field {
+    position: relative;
+    width: 100%;
+    padding-top: 12px;
+}
+
+.nws-col2 form .field input {
+    width: 100%;
+    height: 40px;
+    line-height: 50px;
+    padding-left: .9375rem;
+    padding-right: .9375rem;
+    background-color: transparent;
+    border-color: rgba(0, 0, 0, .3);
+    border-radius: 4px;
+    border-width: 1px;
+    font-family: Nuckle, Arial, Helvetica, sans-serif;
+    font-size: max(12.8px, 1rem);
+    --tw-text-opacity: 1;
+    color: #000;
+    outline: none;
+}
+
+.nws-col2 form .field label {
+    background-color: #fff;
+    display: inline-flex;
+    font-size: max(12px, .75rem);
+    left: .625rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    padding-left: .3125rem;
+    padding-right: .3125rem;
+    pointer-events: none;
+    position: absolute;
+    top: 3px;
+    z-index: 1;
+    font-weight: 500;
+}
+
+.nws-col2 form .field label::before {
+    content: "*";
+}
+
+.nws-col2 form .field input:is(:hover, :valid, :focus) {
+    border-color: rgba(0, 0, 0, 8);
+}
+
+.nws-col2 .field-check {
+    width: 100%;
+    margin: 1.25rem 0px;
+}
+
+.nws-col2 .field-check label {
+    width: 100%;
+    display: flex;
+    gap: .9375rem;
+}
+
+.nws-col2 .field-check label input {
+    height: 0;
+    width: 0;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nws-col2 .field-check label .fake-check {
+    display: block;
+    height: 20px;
+    padding: inherit;
+    position: relative;
+    transition: opacity .3s, background-color .3s, border .3s;
+    transition-timing-function: cubic-bezier(.32, .94, .6, 1);
+    width: 20px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, .3);
+    min-width: 20px;
+    cursor: pointer;
+}
+
+.nws-col2 .field-check label .fake-check:hover {
+    border-color: rgba(0, 0, 0, 0.8);
+}
+
+.nws-col2 .field-check label .fake-check img {
+    transition: all 0.3s;
+    transform: scale(0);
+}
+
+.nws-col2 .field-check label:has(input:checked) .fake-check {
+    background: #ff5e2b;
+    border-color: transparent;
+}
+
+.nws-col2 .field-check label:has(input:checked) .fake-check img {
+    transform: scale(0.8);
+}
+
+.nws-col2 .field-check p {
+    font-size: 13px;
+    line-height: 19px;
+    font-weight: 500;
+    color: #000;
+}
+
+.nws-col2 .field-check p a {
+    text-decoration: underline;
+}
+
+.nws-col2:has(.field-check label input:not(:checked)) button.site-btn {
+    background: #F6F4F3;
+    color: #6b6b6b;
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+.site-footer {
+    width: 100%;
+    background: #fff;
+}
+
+.foot-wrap {
+    width: 100%;
+    position: relative;
+    background: #000;
+    color: #fff;
+    transition: clip-path .7s cubic-bezier(.32, .94, .6, 1), -webkit-clip-path .7s cubic-bezier(.32, .94, .6, 1);
+    transition-delay: .7s;
+    clip-path: inset(0px 0px);
+    clip-path: inset(.625rem round 8px);
+    padding: 2.675rem 1.525rem 1.55rem;
+}
+
+.foot-anima {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0px;
+}
+
+.footer-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.foot-items-left {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.foot-col {
+    width: 100%;
+}
+
+.foot-col h4 {
+    font-size: 23px;
+    line-height: 25px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.foot-col ul li a {
+    font-size: 15px;
+    line-height: 18px;
+    color: #fff;
+    font-weight: 500;
+    padding-bottom: 0px;
+    margin-top: 4px;
+    display: inline-block;
+    position: relative;
+    text-transform: capitalize;
+}
+
+.foot-col ul li a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background: #ffffffa8;
+    transition: transform 0.3s;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+.foot-col ul li a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.foot-items-right {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.foot-items-right .btn-outlined {
+    color: #fff;
+    border-color: #fff;
+}
+
+.foot-items-right .btn-outlined:hover {
+    background: #fff;
+    color: #000;
+}
+
+.foot-items-right .site-btn:not(.btn-outlined) {
+    background: #FF5E2B;
+    border: 1px solid transparent;
+}
+
+.foot-items-right .site-btn:not(.btn-outlined):hover {
+    background: #fff;
+}
+
+.foot-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18.125rem;
+    opacity: .65;
+}
+
+.foot-bottom .fbc-1 ul {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.foot-bottom .fbc-1 ul li a {
+    font-size: 12px;
+    line-height: 18px;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+}
+
+.foot-bottom .fbc-1 ul li a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background: #ffffffa8;
+    transition: transform 0.3s;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+.foot-bottom .fbc-1 ul li a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.foot-bottom .fbc-2 p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+}
+
+.foot-anima svg {
+    position: absolute;
+    top: 50%;
+    transform: translate(0px, -50%);
+    right: 7.5rem;
+    width: 100%;
+    max-width: 766px;
+    overflow: visible;
+}
+
+@keyframes waveAnimation-ccb0efbb {
+    0% {
+        opacity: 1;
+        transform: scaleX(1)
+    }
+
+    to {
+        opacity: 0;
+        transform: scale3d(var(--scale-limit), var(--scale-limit), 1)
+    }
+}
+
+.circles[data-v-ccb0efbb] {
+    animation: waveAnimation-ccb0efbb 10s cubic-bezier(.4, 0, .68, .06) calc(var(--index)* 2s) infinite forwards;
+    --scale-limit: 25;
+    transform-box: fill-box;
+    transform-origin: center;
 }
