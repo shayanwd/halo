@@ -254,6 +254,7 @@ html.lenis body {
     z-index: 0;
     background: #fff;
     border-radius: 4px;
+    font-weight: 500;
 }
 
 .site-btn:hover {
@@ -1090,13 +1091,13 @@ html.lenis body {
     margin-left: auto;
 }
 
-.nws-col2 form .field {
+form .field {
     position: relative;
     width: 100%;
     padding-top: 12px;
 }
 
-.nws-col2 form .field input {
+form .field input {
     width: 100%;
     height: 40px;
     line-height: 50px;
@@ -1113,7 +1114,7 @@ html.lenis body {
     outline: none;
 }
 
-.nws-col2 form .field label {
+form .field label {
     background-color: #fff;
     display: inline-flex;
     font-size: max(12px, .75rem);
@@ -1129,26 +1130,26 @@ html.lenis body {
     font-weight: 500;
 }
 
-.nws-col2 form .field label::before {
+form .field label::before {
     content: "*";
 }
 
-.nws-col2 form .field input:is(:hover, :valid, :focus) {
+form .field input:is(:hover, :valid, :focus) {
     border-color: rgba(0, 0, 0, 8);
 }
 
-.nws-col2 .field-check {
+.field-check {
     width: 100%;
     margin: 1.25rem 0px;
 }
 
-.nws-col2 .field-check label {
+.field-check label {
     width: 100%;
     display: flex;
     gap: .9375rem;
 }
 
-.nws-col2 .field-check label input {
+.field-check label input {
     height: 0;
     width: 0;
     position: absolute;
@@ -1156,7 +1157,7 @@ html.lenis body {
     pointer-events: none;
 }
 
-.nws-col2 .field-check label .fake-check {
+.field-check label .fake-check {
     display: block;
     height: 20px;
     padding: inherit;
@@ -1171,36 +1172,36 @@ html.lenis body {
     cursor: pointer;
 }
 
-.nws-col2 .field-check label .fake-check:hover {
+.field-check label .fake-check:hover {
     border-color: rgba(0, 0, 0, 0.8);
 }
 
-.nws-col2 .field-check label .fake-check img {
+.field-check label .fake-check img {
     transition: all 0.3s;
     transform: scale(0);
 }
 
-.nws-col2 .field-check label:has(input:checked) .fake-check {
+.field-check label:has(input:checked) .fake-check {
     background: #ff5e2b;
     border-color: transparent;
 }
 
-.nws-col2 .field-check label:has(input:checked) .fake-check img {
+.field-check label:has(input:checked) .fake-check img {
     transform: scale(0.8);
 }
 
-.nws-col2 .field-check p {
+.field-check p {
     font-size: 13px;
     line-height: 19px;
     font-weight: 500;
     color: #000;
 }
 
-.nws-col2 .field-check p a {
+.field-check p a {
     text-decoration: underline;
 }
 
-.nws-col2:has(.field-check label input:not(:checked)) button.site-btn {
+form:has(.field-check label input:not(:checked)) button.site-btn {
     background: #F6F4F3;
     color: #6b6b6b;
     pointer-events: none;
@@ -1410,4 +1411,200 @@ html.lenis body {
     --scale-limit: 25;
     transform-box: fill-box;
     transform-origin: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contact Page */
+
+.c-inner-banner-sec {
+    width: 100%;
+    background: #000;
+    min-height: 100vh;
+}
+
+h1 {}
+
+.cib-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 50%;
+    gap: 30px;
+    padding: 7.5rem 0px;
+    padding-left: calc(1.8778vw - 25px*0.066);
+}
+
+.cib-col1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3.125rem 0 2.5rem;
+    gap: 20px;
+}
+
+.cib-c1-top h1 {
+    font-size: 95px;
+    line-height: 90px;
+    font-weight: 500;
+}
+
+.cib-c1-bottom h3 {
+    font-size: 30px;
+    line-height: 33px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.contact-sec {
+    width: 100%;
+    padding: 7.5rem 0px;
+}
+
+.contact-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+}
+
+.contact-col1 {
+    width: 100%;
+    max-width: 528px;
+}
+
+.contact-col1 h2 {
+    font-size: 61px;
+    line-height: 61px;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.contact-col1 .field:not(:first-child) {
+    margin-top: 20px;
+}
+
+.contact-col1 .field label {
+    background: #f5f1ee;
+}
+
+form .field select {
+    width: 100%;
+    height: 40px;
+    line-height: 50px;
+    padding-left: .9375rem;
+    padding-right: .9375rem;
+    background-color: transparent;
+    border-color: rgba(0, 0, 0, .3);
+    border-radius: 4px;
+    border-width: 1px;
+    font-family: Nuckle, Arial, Helvetica, sans-serif;
+    font-size: max(12.8px, 1rem);
+    --tw-text-opacity: 1;
+    color: #000;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+form .field select:is(:hover, :valid, :focus) {
+    border-color: rgba(0, 0, 0, 8);
+}
+
+form .field select+svg {
+    position: absolute;
+    bottom: 1px;
+    height: 20px;
+    right: 2px;
+    background: #f5f1ee;
+    width: 48px;
+    margin: auto;
+    top: 13px;
+}
+
+form .field textarea {
+    width: 100%;
+    height: 40px;
+    line-height: 50px;
+    padding-left: .9375rem;
+    padding-right: .9375rem;
+    background-color: transparent;
+    border-color: rgba(0, 0, 0, .3);
+    border-radius: 4px;
+    border-width: 1px;
+    font-family: Nuckle, Arial, Helvetica, sans-serif;
+    font-size: max(12.8px, 1rem);
+    --tw-text-opacity: 1;
+    color: #000;
+    outline: none;
+    min-height: 127px;
+}
+
+form .field textarea:is(:hover, :valid, :focus) {
+    border-color: rgba(0, 0, 0, 8);
+}
+
+.contact-col2 {
+    width: 100%;
+}
+
+.contact-col2 .more-questions {
+    width: 100%;
+    max-width: 310px;
+    margin-left: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: sticky;
+    top: 80px;
+}
+
+.mq-top h3 {
+    font-size: 30px;
+    line-height: 33px;
+    color: #000;
+    font-weight: 500;
+}
+
+.mq-bottom .site-btn {
+    width: 100%;
+}
+
+.contact-col1 .field-check p {
+    font-size: 17px;
+    line-height: 26px;
 }

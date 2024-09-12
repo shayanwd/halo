@@ -21,7 +21,7 @@ gsap.ticker.lagSmoothing(0)
 Fancybox.bind("[data-fancybox]", {});
 
 
-function homeMousemove() {
+function homeAnimations() {
     const hero = document.querySelector(".main-banner-sec")
     const mover = document.getElementById("move")
     if (hero && mover) {
@@ -73,7 +73,28 @@ function homeMousemove() {
         })
     }
 
+
+
+    var sliderThumbnail = new Swiper('.slider-thumbnail', {
+        direction: "vertical",
+        // slidesPerView: 3,
+        initialSlide: 1,
+        slidesPerView: "auto",
+        spaceBetween: 10,
+        centeredSlides: "true",
+        freeMode: false,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: false,
+        allowTouchMove: false,
+    });
+
+    var slider = new Swiper('.slider', {
+        effect: "fade",
+        thumbs: {
+            swiper: sliderThumbnail
+        }
+    });
 }
 
 
-homeMousemove()
+homeAnimations()
