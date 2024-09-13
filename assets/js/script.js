@@ -1,7 +1,7 @@
 const lenis = new Lenis()
 
 lenis.on('scroll', (e) => {
-    console.log(e)
+    // console.log(e)
 })
 
 lenis.on('scroll', ScrollTrigger.update)
@@ -24,10 +24,12 @@ Fancybox.bind("[data-fancybox]", {});
 function homeAnimations() {
     const hero = document.querySelector(".main-banner-sec")
     const mover = document.getElementById("move")
-    if (hero && mover) {
+    if (hero) {
         window.addEventListener("DOMContentLoaded", () => {
             hero.classList.add("animate")
         })
+    }
+    if (hero && mover) {
         document.addEventListener("mousemove", (dets) => {
             gsap.set(mover, {
                 left: `50%`,
@@ -96,5 +98,21 @@ function homeAnimations() {
     });
 }
 
+function contactAnimations() {
+    var swiper = new Swiper(".meetSwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 18,
+        slideVisibleClass: 'swiper-slide-visible',
+        navigation: {
+            nextEl: ".meet-button-next",
+            prevEl: ".meet-button-prev",
+        },
+    });
+}
 
-homeAnimations()
+
+
+
+
+homeAnimations();
+contactAnimations();
