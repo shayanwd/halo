@@ -537,20 +537,6 @@
     <script src="assets/js/script.js"></script>
 
 
-    <script>
-
-        jQuery(function ($) {
-            $(".accordion-content").css("display", "none");
-
-            $(".accordion h4").click(function () {
-                $(".accordion h4").not(this).removeClass("open");
-                $(".accordion h4").not(this).next().slideUp(300);
-                $(this).toggleClass("open");
-                $(this).next().slideToggle(300);
-            });
-        });
-
-    </script>
 
 
 </body>
