@@ -190,8 +190,110 @@ function scrollSpy() {
     })
 }
 
+function sequence() {
+
+    const lighting = document.querySelector('.lighting-sec')
+
+    if (lighting) {
+        gsap.utils.toArray(".lt-cell").forEach((element) => {
+            gsap.fromTo(element,
+                { opacity: 0 },
+                {
+                    opacity: 1,
+                    scrollTrigger: {
+                        trigger: element,
+                        start: "top center",
+                        end: "bottom center",
+                        scrub: true,
+                    }
+                }
+            );
+        });
+
+
+
+
+        const canvas = document.querySelector("canvas");
+        const context = canvas.getContext("2d");
+        const frames = {
+            currentIndex: 0,
+            maxIndex: 130
+        }
+
+        let imagesLoaded = 0;
+        const images = [];
+
+        function preloadImages() {
+            for (var i = 1; i <= frames.maxIndex; i++) {
+                const imageUrl = `assets/sequence/sec-${i.toString().padStart(4, "0")}.jpeg`
+                const img = new Image()
+                img.src = imageUrl
+                img.onload = () => {
+                    imagesLoaded++
+                    if (imagesLoaded === frames.maxIndex) {
+                        loadImage(frames.currentIndex)
+                        startAnimation()
+                    }
+                }
+                images.push(img)
+            }
+        }
+
+        function loadImage(index) {
+            if (index >= 0 && index <= frames.maxIndex) {
+                const img = images[index];
+
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+
+                const scaleX = canvas.width / img.width;
+                const scaleY = canvas.height / img.height;
+                const scale = Math.max(scaleX, scaleY);
+
+                const newWidth = img.width * scale;
+                const newHeight = img.height * scale;
+
+
+                const offsetX = (canvas.width - newWidth) / 2;
+                const offsetY = (canvas.height - newHeight) / 2;
+
+
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                context.imageSmoothingQuality = true;
+                context.imageSmoothingQuality = "high";
+                context.drawImage(img, offsetX, offsetY, newWidth, newHeight);
+                frames.currentIndex = index;
+            }
+
+        }
+
+        function startAnimation() {
+            var tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".lt-timeline",
+                    start: "top top",
+                    end: "center end",
+                    // pin: true,
+                    scrub: 1,
+                }
+            })
+            tl.to(frames, {
+                currentIndex: frames.maxIndex,
+                snap: 1,
+                onUpdate: function () {
+                    loadImage(Math.floor(frames.currentIndex))
+                }
+            })
+        }
+
+
+        preloadImages()
+    }
+
+}
 
 homeAnimations();
 contactAnimations();
 accordions();
 scrollSpy();
+sequence();

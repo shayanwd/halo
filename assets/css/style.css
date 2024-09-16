@@ -2596,6 +2596,32 @@ form .field textarea:is(:hover, :valid, :focus) {
     padding-bottom: 7.5rem;
 }
 
+.feature-top {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.feature-top model-viewer {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: block;
+}
+
+.feature-top-title {
+    width: 100%;
+    padding-top: 60px;
+}
+
+.feature-top-title h2 {
+    font-size: 113px;
+    line-height: 107px;
+    font-weight: 500;
+    max-width: 1100px;
+    color: #ffffff;
+}
+
 .prod-cells-grid {
     width: 100%;
     display: grid;
@@ -2675,6 +2701,102 @@ form .field textarea:is(:hover, :valid, :focus) {
 
 
 
+
+
+
+
+.lighting-sec {
+    width: 100%;
+    position: relative;
+    color: #fff;
+    background: #000;
+}
+
+.lighting-bg {
+    position: sticky;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.lighting-bg #frame {
+    width: 100%;
+    height: 100%;
+    background-image: url(../sequence/sec-0130.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.lighting-content {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+    margin-top: -100vh;
+    padding: 7.5rem 0px 3.5rem;
+}
+
+.lighting-content {}
+
+.lt-title h2 {
+    font-size: 113px;
+    line-height: 107px;
+    font-weight: 500;
+    max-width: 900px;
+    padding: 20px 0px;
+}
+
+.lt-title {
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.lt-timeline {
+    width: 100%;
+    padding-bottom: 25vh;
+}
+
+.lt-cell {
+    width: 100%;
+    min-height: 50vh;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 24%;
+}
+
+.lt-cell svg {
+    width: 81px !important;
+    height: 81px !important;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.lt-cell h3 {
+    font-size: 27px;
+    line-height: 30px;
+}
+
+.lt-cell p {
+    font-size: 18px;
+    line-height: 27px;
+    margin-top: 10px;
+}
+
+.lighting-bg::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom, #000, transparent);
+    pointer-events: none;
+}
 
 
 
