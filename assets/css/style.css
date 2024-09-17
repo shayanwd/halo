@@ -437,12 +437,12 @@ html.lenis body {
     display: flex;
     align-items: flex-end;
     padding: 1.625rem calc(1.8778vw - 25px*0.066) 2.625rem;
-    animation: clip 1s cubic-bezier(0.22, 0.2, 0.29, 1.05);
     animation-delay: 1s;
 }
 
-.main-banner-sec.animate {
+.main-banner-sec.reveal {
     clip-path: inset(0.625rem round 8px);
+    animation: clip 1s cubic-bezier(0.22, 0.2, 0.29, 1.05);
 }
 
 @keyframes clip {
@@ -490,6 +490,7 @@ html.lenis body {
     font-size: 57px;
     line-height: 37px;
     font-weight: 500;
+    padding-top: 20px;
 }
 
 .main-banner-sec a[data-fancybox] {
@@ -611,7 +612,7 @@ html.lenis body {
     right: 0;
     width: 100%;
     border-top: 1px solid #000;
-    transform: scaleX(1);
+    transform: scaleX(0);
     transform-origin: left;
     transition: all 0.3s;
 }
@@ -624,9 +625,14 @@ html.lenis body {
     right: 0;
     width: 100%;
     border-bottom: 1px solid #000;
-    transform: scaleX(1);
+    transform: scaleX(0);
     transform-origin: left;
     transition: all 0.3s;
+}
+
+.mirror-col1 ul li.reveal::before,
+.mirror-col1 ul li.reveal::after {
+    transform: scaleX(1);
 }
 
 .mirror-col1 a {
@@ -1010,6 +1016,7 @@ html.lenis body {
     line-height: 33px;
     font-weight: 500;
     color: #000;
+    padding-bottom: 10px;
 }
 
 .ln-txt {
@@ -1084,6 +1091,7 @@ html.lenis body {
     line-height: 68px;
     font-weight: 500;
     color: #000000;
+    padding-bottom: 20px;
 }
 
 .nws-col2 form {
@@ -1240,10 +1248,13 @@ form:has(.field-check label input:not(:checked)) button.site-btn {
     background: #000;
     color: #fff;
     transition: clip-path .7s cubic-bezier(.32, .94, .6, 1), -webkit-clip-path .7s cubic-bezier(.32, .94, .6, 1);
-    transition-delay: .7s;
+    /* transition-delay: .5s; */
     clip-path: inset(0px 0px);
-    clip-path: inset(.625rem round 8px);
     padding: 2.675rem 1.525rem 1.55rem;
+}
+
+.foot-wrap.reveal {
+    clip-path: inset(.625rem round 8px);
 }
 
 .foot-anima {
@@ -2109,9 +2120,13 @@ form .field textarea:is(:hover, :valid, :focus) {
     right: 0;
     width: 100%;
     border-top: 1px solid #000;
-    transform: scaleX(1);
+    transform: scaleX(0);
     transform-origin: left;
     transition: all 0.3s;
+}
+
+.work-w-col1 ul li.reveal::before {
+    transform: scaleX(1);
 }
 
 .work-w-col1 ul li:last-child::after {
@@ -2388,6 +2403,10 @@ form .field textarea:is(:hover, :valid, :focus) {
     transition: all .4s cubic-bezier(.32, .94, .6, 1);
     width: 100%;
     transform-origin: left;
+    transform: scaleX(0);
+}
+
+.accordion:has(h4.reveal)::before {
     transform: scaleX(1);
 }
 
@@ -2620,6 +2639,7 @@ form .field textarea:is(:hover, :valid, :focus) {
     font-weight: 500;
     max-width: 1100px;
     color: #ffffff;
+    padding-bottom: 20px;
 }
 
 .prod-cells-grid {
@@ -3189,4 +3209,57 @@ form .field textarea:is(:hover, :valid, :focus) {
 
 .sspy-col2 .site-btn:hover {
     background: #ff5e2b;
+}
+
+
+
+
+
+
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+.bcr-col1 svg,
+.masker {
+    -webkit-mask-image: linear-gradient(90deg, #fff 33.33%, transparent 66.66%);
+    mask-image: linear-gradient(90deg, #fff 33.33%, transparent 66.66%);
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+    -webkit-mask-size: 300% 100%;
+    mask-size: 300% 100%;
+    transition: mask-position var(--duration, 2s) ease var(--delay, 0s),
+        -webkit-mask-position var(--duration, 2s) ease var(--delay, 0s);
+}
+
+/* Reveal animation - moves the mask to show the content */
+.reveal,
+h1.reveal,
+h2.reveal,
+h3.reveal,
+h4.reveal,
+.bcr-col1 svg.reveal {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+}
+
+
+.load-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000000;
+    z-index: 999;
+    transition: all 0.2s ease-in-out;
+}
+
+.load-layer.hide {
+    opacity: 0;
+    pointer-events: none;
 }
