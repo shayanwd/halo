@@ -490,7 +490,7 @@ html.lenis body {
     font-size: 57px;
     line-height: 37px;
     font-weight: 500;
-    padding-top: 20px;
+    padding: 10px 0 4px;
 }
 
 .main-banner-sec a[data-fancybox] {
@@ -642,6 +642,8 @@ html.lenis body {
 
 .mirror-col2 {
     width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
 .mirror-gallery {
@@ -663,9 +665,12 @@ html.lenis body {
 }
 
 .mirror-gallery .slider .swiper-slide {
-    width: 100%;
+    width: 100% !important;
     border-radius: 10px;
-    aspect-ratio: 1/1;
+}
+
+.mirror-gallery .slider .swiper-slide:not(.swiper-slide-active) {
+    opacity: 0 !important;
 }
 
 .mirror-gallery .slider .swiper-slide img {
@@ -1236,6 +1241,7 @@ form:has(.field-check label input:not(:checked)) button.site-btn {
 .site-footer {
     width: 100%;
     background: #fff;
+    overflow: hidden;
 }
 
 .faq-list-sec+.site-footer {
@@ -1264,6 +1270,10 @@ form:has(.field-check label input:not(:checked)) button.site-btn {
     left: 0;
     bottom: 0;
     right: 0px;
+    max-width: 1580px;
+    margin: 0 auto;
+    padding: 0 15px;
+    /* overflow: hidden; */
 }
 
 .footer-row {
@@ -2269,7 +2279,8 @@ form .field textarea:is(:hover, :valid, :focus) {
     line-height: 35px;
     color: #fff;
     font-weight: 500;
-    margin-bottom: 22px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
 }
 
 .site-btn.btn-underlined {
@@ -2361,6 +2372,7 @@ form .field textarea:is(:hover, :valid, :focus) {
     line-height: 72px;
     color: #000;
     font-weight: 500;
+    padding: 0 0 10px;
 }
 
 .fls-c2 .accordions-wrap {
@@ -2758,8 +2770,6 @@ form .field textarea:is(:hover, :valid, :focus) {
     padding: 7.5rem 0px 3.5rem;
 }
 
-.lighting-content {}
-
 .lt-title h2 {
     font-size: 113px;
     line-height: 107px;
@@ -3009,6 +3019,7 @@ form .field textarea:is(:hover, :valid, :focus) {
     line-height: 72px;
     color: #000;
     font-weight: 500;
+    padding: 0px 0px 10px;
 }
 
 .dsg-col2 {
