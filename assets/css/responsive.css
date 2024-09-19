@@ -413,6 +413,7 @@
     .foot-bottom .fbc-2 p {
         font-size: 15px;
         line-height: 23px;
+        text-align: center;
     }
 
     .foot-anima {
@@ -440,4 +441,145 @@
     }
 }
 
-@media only screen and (max-width:575px) {}
+@media only screen and (max-width:575px) {
+    .foot-anima svg {
+        transform: translate(-63%, -110%) rotate(-90deg);
+    }
+}
+
+@media only screen and (max-width:465px) {
+    .foot-items-right {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+
+@media only screen and (max-width:440px) {
+    .bcr-col2 h1 {
+        font-size: 34px;
+        line-height: 37px;
+    }
+
+    .main-banner-sec {
+        padding-bottom: 11px;
+    }
+
+    .mirror-sec {
+        padding: 3rem 0px;
+    }
+
+    .mirror-col1 h2 {
+        font-size: 34px;
+        line-height: 37px;
+        margin-bottom: 5px;
+    }
+
+    .mirror-col1 p {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    .mirror-col1 ul li {
+        font-size: 13px;
+        line-height: 19px;
+        gap: 15px;
+    }
+
+    .mirror-col1 ul li .m-ico svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .swiper-container.slider-thumbnail .swiper-wrapper .swiper-slide {
+        width: 54px !important;
+        height: 54px !important;
+    }
+
+    .educate-cntnt-row {
+        align-items: start;
+        gap: 1.25rem;
+    }
+
+    .educate-grad {
+        height: 57px;
+        width: 57px;
+        border-radius: 14px;
+    }
+
+    .educate-grad svg {
+        max-width: 40px;
+    }
+
+    .educate-title h2 {
+        font-size: 21px;
+        line-height: 26px;
+    }
+
+    .educate-txt p {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    .educate-images-row {
+        margin-top: 60px;
+    }
+
+    .rebranding-sec {
+        padding: 3.5rem 0px;
+    }
+
+    .rebranding-col1 h2 {
+        font-size: 43px;
+        line-height: 43px;
+        text-align: left;
+        margin-bottom: 0px;
+    }
+
+    .rbc-grid>img {
+        max-width: 140px;
+    }
+
+    .rebranding-col1 {
+        gap: 15px;
+    }
+
+    .rbc-grid {
+        gap: 25px;
+    }
+
+    .rbc-cntnt p {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    .latest-news-sec {
+        padding: 3.5rem 0px 2rem;
+    }
+
+    .latest-news-title {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .latest-news-title h2 {
+        font-size: 34px;
+        line-height: 37;
+        line-height: 37px;
+    }
+
+    .latest-news-wrap {
+        margin-top: 2.25rem;
+    }
+
+    .ln-title h3 {
+        font-size: 21px;
+        line-height: 24px;
+    }
+
+    .ln-txt p {
+        font-size: 13px;
+        line-height: 19px;
+    }
+}
