@@ -149,9 +149,15 @@ html.lenis body {
     width: 100%;
     top: 0;
     right: 0;
-    position: absolute;
+    position: fixed;
     padding: 40px calc(1.8778vw - 25px*0.066) 20px;
     z-index: 10;
+    transition: background 0.3s, padding 0.3s;
+}
+
+.site-header.scrolled {
+    background: #000;
+    padding: 20px calc(1.8778vw - 25px*0.066) 20px;
 }
 
 .header-row {
@@ -350,7 +356,9 @@ html.lenis body {
     display: block !important;
 }
 
-
+.menu-toggle {
+    display: none;
+}
 
 
 

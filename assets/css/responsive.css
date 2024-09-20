@@ -1,4 +1,157 @@
 @media only screen and (max-width:1024px) {
+
+    .site-header:has(.menu-toggle.active) {
+        top: 0 !important;
+    }
+
+    .header-row {
+        position: relative;
+        justify-content: space-between;
+    }
+
+    .head-logo {
+        position: relative;
+        z-index: -1;
+    }
+
+    .head-logo svg {
+        max-width: 27vw;
+    }
+
+    .head-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000000;
+        z-index: 0;
+        clip-path: inset(0rem round 0px);
+        clip-path: inset(0.625rem round 8px);
+        display: grid;
+        padding: 40px calc(1.8778vw - 25px* 0.066) 40px;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .head-more .btn-sq {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .head-more .btn-sq.menu-toggle {
+        display: inline-flex;
+        position: initial;
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .head-more .btn-sq.vid-toggle {
+        left: calc(40px + 10px);
+    }
+
+    .site-header {
+        padding: 20px calc(1.8778vw - 25px* 0.066) 20px;
+    }
+
+    .head-nav ul {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .head-nav ul li {
+        font-size: max(22.4px, 1.75rem);
+        line-height: max(22.4px, 1.75rem);
+    }
+
+    .head-nav ul li a:not(.site-btn) span:nth-child(2) {
+        top: 150% !important;
+        opacity: 0 !important;
+    }
+
+    .head-nav ul li a:has(.site-btn) span {
+        transform: none !important;
+        opacity: 1 !important;
+    }
+
+    .head-nav ul li::after {
+        opacity: 0;
+    }
+
+    .nv-wrap {
+        width: calc(100% - 30px);
+        margin: auto;
+        height: 100%;
+        position: relative;
+    }
+
+    .head-nav ul li:has(.site-btn) {
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        bottom: 0;
+    }
+
+    .head-nav ul li .site-btn {
+        width: 100%;
+        background: #FF5E2B;
+    }
+
+    .head-nav ul li .site-btn:hover {
+        background: #ffffff;
+    }
+
+    .head-nav ul li:hover a span:nth-child(1) {
+        transform: none;
+        opacity: 1;
+    }
+
+    .menu-toggle .btn-ics :is(.ics-top, .ics-bottom) {
+        transform: none !important;
+        opacity: 1 !important;
+    }
+
+    .menu-toggle .btn-ics :is(.ics-top, .ics-bottom) svg {
+        transform: scale(1.6);
+        transition: all 0.3s;
+    }
+
+    .site-btn.btn-sq.menu-toggle {
+        background-color: #ffffff1a;
+        color: #fff !important;
+    }
+
+    button.site-btn.btn-sq.menu-toggle:hover svg {
+        color: #fff;
+    }
+
+    .menu-toggle .btn-ics :is(.ics-top, .ics-bottom) svg:nth-child(2) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: scale(0.4);
+        opacity: 0;
+    }
+
+    .menu-toggle.active .btn-ics :is(.ics-top, .ics-bottom) svg {
+        transform: scale(0.4);
+        opacity: 0;
+    }
+
+    .menu-toggle.active .btn-ics :is(.ics-top, .ics-bottom) svg:nth-child(2) {
+        transform: scale(1.6);
+        opacity: 1;
+    }
+
+    /* HEADER RESPONSIVE */
+
     .main-banner-sec {
         padding-bottom: 30px;
     }
@@ -175,6 +328,10 @@
 }
 
 @media only screen and (max-width:800px) {
+    .banner-play {
+        display: none;
+    }
+
     .bcr-col1 {
         display: none;
     }
@@ -565,7 +722,6 @@
 
     .latest-news-title h2 {
         font-size: 34px;
-        line-height: 37;
         line-height: 37px;
     }
 
@@ -581,5 +737,32 @@
     .ln-txt p {
         font-size: 13px;
         line-height: 19px;
+    }
+
+    .nws-col1 h2 {
+        line-height: 39px;
+        font-size: 36px;
+        padding-bottom: 3px;
+    }
+
+    .newsletter-grid {
+        gap: 10px;
+    }
+
+
+    .foot-col h4 {
+        font-size: 19px;
+        line-height: 21px;
+    }
+
+    .foot-col ul li a {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    .foot-bottom .fbc-1 ul li a,
+    .foot-bottom .fbc-2 p {
+        font-size: 12px;
+        line-height: 18px;
     }
 }
