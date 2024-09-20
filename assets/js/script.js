@@ -52,15 +52,12 @@ function headerAnimations() {
 
 
     gsap.matchMedia().add({
-        // Conditions for max-width 1024px
         isMobile: "(max-width: 1024px)"
     }, (context) => {
 
-        // Selectors for the navigation and menu button
         const headNav = document.querySelector(".head-nav");
         const menuBtn = document.querySelector(".menu-toggle");
 
-        // GSAP timeline for the navigation animation
         let nvTl = gsap.timeline({ paused: true, reversed: true })
             .to(headNav, {
                 opacity: 1,
@@ -79,10 +76,7 @@ function headerAnimations() {
                 pointerEvents: "all",
             }, "b");
 
-        // Pause the timeline initially
         nvTl.pause();
-
-        // Toggle animation on button click
         menuBtn.addEventListener("click", () => {
             menuBtn.classList.toggle("active");
             if (nvTl.reversed()) {
@@ -92,7 +86,6 @@ function headerAnimations() {
             }
         });
 
-        // Clean-up function to remove event listeners if needed
         return () => {
             menuBtn.removeEventListener("click");
         };
