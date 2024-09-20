@@ -1653,6 +1653,7 @@ form .field textarea:is(:hover, :valid, :focus) {
 
 
 .meet-sec {
+    overflow: hidden;
     position: relative;
     width: 100%;
     min-height: 100vh;

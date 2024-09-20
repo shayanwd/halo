@@ -172,6 +172,104 @@
         max-width: 614px;
         margin-left: 0;
     }
+
+    /* Taha's Code  */
+
+    .fqb-col1 h1 {
+        font-size: 6.25rem;
+        line-height: .95;
+    }
+
+    .fqb-col2 h2 {
+        font-size: max(22.4px, 1.75rem);
+        line-height: 1.1;
+    }
+
+    .fls-c2>h2 {
+        font-size: 55px;
+        line-height: 55px;
+    }
+
+    .accordion h4 {
+        font-size: 20px;
+    }
+
+    .cib-row {
+       grid-template-columns: 1fr;
+    }
+
+    .cib-col2 {
+        order: -1;
+    }
+
+    .cib-c1-bottom {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cib-c1-bottom>img {
+        max-width: 322px;
+    }
+
+    .prod-banner .bcr-col2 h1 {
+        font-size: 80px;
+        line-height: 80px;
+    }
+
+    .prod-banner .banner-cntnt-row {
+        grid-template-columns: 468px 237px;
+    }
+
+    .mirror-col1 h2 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .feature-top-title h2 {
+        font-size: 80px;
+        line-height: 80px;
+        max-width: 600px;
+    }
+
+    .pc-content .pc-txt h3 {
+        font-size: 21px;
+        line-height: 25px;
+    }
+
+    .pc-content .pc-txt p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .lt-cell h3 {
+        font-size: 23px;
+        line-height: 27px;
+    }
+
+    .work-w-col1 h2 {
+        font-size: 60px;
+        max-width: 300px;
+    }
+
+    .wellness-title h2 {
+        font-size: 87px;
+        max-width: 500px;
+    }
+
+    .dsg-col1 h2 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    .frq-col1 h2 {
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    .reserve-col1 h2 {
+        font-size: 100px;
+        line-height: 90px;
+    }
 }
 
 @media only screen and (max-width:800px) {
@@ -438,6 +536,479 @@
         background: linear-gradient(0, #000 30%, transparent);
         pointer-events: none;
     }
+
+    /* Taha's Code */
+
+    .cib-row {
+        grid-template-columns: auto;
+    }
+
+    .cib-col2 {
+        order: -1;
+    }
+
+    .cib-c1-top h1 {
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    .cib-c1-bottom h3 {
+        text-align: center;
+    }
+
+    .cib-row {
+        padding-bottom: 3.75rem;
+    }
+
+    .cib-col1 {
+        gap: 3.75rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr
+    }
+
+    .contact-col1 {
+        max-width: 100%;
+    }
+
+    .contact-col2 .more-questions {
+        max-width: 100%;
+    }
+
+    .contact-col2 .more-questions {
+        max-width: 100%;
+        min-height: 200px;
+    }
+
+    .contact-col1 h2 {
+        max-width: 300px;
+        font-size: 48px;
+        line-height: 52px;
+    }
+
+    .contact-sec {
+        padding-bottom: 3.75rem;
+        padding-top: 3.75rem;
+    }
+
+    .meet-title h2 {
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    .meet-cntnt-holder {
+        grid-template-columns: auto;
+    }
+
+    .mch-col1 {
+        order: 2;
+        margin-top: 30px;
+    }
+
+    .faq-banner-row {
+        grid-template-columns: 1fr;
+    }
+
+    .fqb-col2 {
+        display: none;
+    }
+
+    .fqb-col1 h1 {
+        font-size: 4.25rem;
+    }
+
+    .faq-banner-row {
+        padding-top: 30px;
+    }
+
+    .fls-row {
+        grid-template-columns: 1fr;
+    }
+
+    .fq-btn-grid {
+     max-width: 100%;
+    }
+
+    .accordions-wrap {
+        padding: 0;
+    }
+
+    .faq-list-sec {
+        width: 100%;
+        position: relative;
+        padding: 1rem 0px;
+    }
+
+    .faq-list-sec {
+        overflow: hidden;
+    }
+
+    .fls-c1 {
+       overflow-x: auto;
+    }
+
+    .fls-c1::-webkit-scrollbar {
+        display: none;
+    }
+
+    .fq-btn-grid {
+       display: flex;
+       overflow-x: auto;
+    }
+
+    .fq-btn-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .site-btn.btn-blocked {
+        min-height: 57px;
+       width: 181px;
+       min-width: 181px;
+    }
+
+    .btn-blocked>svg {
+        display: none;
+    }
+
+    .values-title h2 {
+        font-size: 60px;
+        line-height: 75px;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .values-sec {
+        padding: 3.5rem 0px;
+    }
+
+    .value-cell h3 {
+        font-size: 28px;
+    }
+
+    .founder-title h2 {
+        font-size: 75px;
+        line-height: 75px;
+    }
+
+    .founder-title h3 {
+        font-size: 23px;
+    }
+
+    .advisors-row {
+        grid-template-columns: 1fr;
+    }
+
+    .advisors-col1 h2 {
+        font-size: 50px;
+    }
+
+    .advisors-sec {
+        padding: 4.5rem 0px;
+    }
+
+    .work-w-row {
+        grid-template-columns: 1fr;
+    }
+
+    .work-w-col1 ul li {
+        max-width: 100%;
+    }
+
+    .work-w-col1 h2 {
+        font-size: 50px;
+    }
+
+    .video-slide-sec .meet-title h2 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    .meet-sec {
+        padding: 4.5rem 0px;
+    }
+
+    .nws-col2 form {
+       max-width: 100%;
+    }
+
+    .reserve-row {
+        grid-template-columns: 1fr;
+    }
+
+    .reserve-col1 h2 {
+        font-size: 50px;
+        line-height: 70px;
+    }
+
+    .reserve-col2 .package-col {
+        max-width: 100%;
+        margin-left: auto;
+    }
+
+    .reserve-row {
+        gap: 150px;
+    }
+
+    .frq-row {
+        grid-template-columns: 1fr;
+    }
+
+    .frq-col1 h2 {
+        max-width: 100%;
+    }
+
+    .frq-col1 h2 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    .dsg-row {
+        grid-template-columns: 1fr;
+    }
+
+    .dsg-txt-row {
+       flex-direction: column;
+    }
+
+    .dsg-txt-cell {
+        max-width: 100%;
+    }
+
+    .dsg-txt-cell p {
+        max-width: 100%;
+    }
+
+    .app-sec-row {
+        grid-template-columns: 1fr;
+    }
+
+    .frequent-sec {
+        overflow-x: hidden;
+    }
+
+    .wellness-title h2 {
+        font-size: 59px;
+        max-width: 100%;
+        line-height: 60px;
+    }
+
+    .wellness-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lt-title h2 {
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    .prod-cells-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .package-cntnt {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-top-title h2 {
+        font-size: 50px;
+        line-height: 50px;
+        max-width: 550px;
+    }
+
+    .lt-cell {
+        max-width: 100%;
+    }
+
+    .sspy-wrap {
+        display: none;
+    }
+
 }
 
-@media only screen and (max-width:575px) {}
+@media only screen and (max-width:575px) {
+    /* Taha's Code */
+
+    .cib-c1-top h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .cib-row {
+        padding-bottom: 2.5rem;
+    }
+
+    .cib-col1 {
+        gap: 2.5rem;
+    }
+
+    .meet-title h2 {
+        font-size: 45px;
+        line-height: 50px;
+    }
+
+    .meet-sec {
+        padding: 4.5rem 0px;
+    }
+
+    .fqb-col1 h1 {
+        font-size: 3.3rem;
+    }
+
+    .faq-banner-row {
+        padding-top: 20px;
+    }
+
+    .fls-c2>h2 {
+        font-size: 45px;
+        line-height: 45px;
+    }
+
+    .nws-col1 h2 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .ln-title h3 {
+        font-size: 25px;
+        line-height: 33px;
+    }
+
+    .latest-news-title {
+       flex-direction: column;
+       align-items: flex-start;
+       gap: 20px;
+    }
+
+    .latest-news-title h2 {
+        font-size: 35px;
+    }
+
+    .video-slide-sec .meet-title h2 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .work-w-col1 h2 {
+        font-size: 40px;
+    }
+
+    .adv-cntnt h4 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .adv-cntnt p {
+        font-size: 14px;
+    }
+
+    .advisor-cell {
+        grid-template-columns: 40px 1fr max-content;
+    }
+
+    .founder-title h2 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    .founder-title h3 {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+    .founder-cntnt p {
+        font-size: 16px;
+    }
+
+    .founder-sec {
+        padding: 4.5rem 0px;
+    }
+
+    .values-title h2 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    
+    .prod-banner .bcr-col2 h1 {
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    .prod-banner-wrap {
+        overflow-x: hidden;
+    }
+
+    .package-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .package-main {
+        position: static;
+    }
+
+    .mirror-col1 h2 {
+        max-width: 100%;
+        font-size: 30px;
+        line-height: 35px;
+        padding: 5px 0px;
+    }
+
+    .mirror-col1 p {
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    .feature-top-title h2 {
+        font-size: 40px;
+    }
+
+    .pc-content .pc-txt p {
+      max-width: 100%;
+      font-size: 10px;
+      line-height: 15px;
+    }
+
+    .prod-cell .pc-content {
+        padding: 20px;
+    }
+
+    .lt-title h2 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    .asc-t-top-head h2 {
+        font-size: 45px;
+        line-height: 45px;
+    }
+
+    .wellness-title {
+        margin-bottom: 50px;
+    }
+
+    .wellness-cell h3 {
+        margin-bottom: 20px;
+        font-size: 23px;
+    }
+
+    .wellness-grid {
+        gap: 40px;
+    }
+
+    .wellness-cell p {
+        font-size: 16px;
+    }
+
+    .app-play-wrap .site-btn {
+        width: 65px;
+    }
+
+}
