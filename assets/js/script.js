@@ -51,35 +51,82 @@ function headerAnimations() {
     });
 
 
-    const headNav = document.querySelector(".head-nav")
-    const menuBtn = document.querySelector(".menu-toggle")
+    gsap.matchMedia().add({
+        // Conditions for max-width 1024px
+        isMobile: "(max-width: 1024px)"
+    }, (context) => {
 
-    let nvTl = gsap.timeline({ paused: true, reversed: true })
-        .to(headNav, {
-            opacity: 1,
-            pointerEvents: "all",
-            duration: 0.3,
-        })
-        .from(".head-nav ul li", {
-            yPercent: 100,
-            opacity: 0,
-            stagger: 0.06,
-            duration: 0.2,
-        }, "b")
-        .to(".abs", {
-            stagger: 0.16,
-            opacity: 1,
-            pointerEvents: "all",
-        }, "b")
-    nvTl.pause()
-    menuBtn.addEventListener("click", () => {
-        menuBtn.classList.toggle("active")
-        if (nvTl.reversed()) {
-            nvTl.play();
-        } else {
-            nvTl.reverse();
-        }
-    })
+        // Selectors for the navigation and menu button
+        const headNav = document.querySelector(".head-nav");
+        const menuBtn = document.querySelector(".menu-toggle");
+
+        // GSAP timeline for the navigation animation
+        let nvTl = gsap.timeline({ paused: true, reversed: true })
+            .to(headNav, {
+                opacity: 1,
+                pointerEvents: "all",
+                duration: 0.3,
+            })
+            .from(".head-nav ul li", {
+                yPercent: 100,
+                opacity: 0,
+                stagger: 0.06,
+                duration: 0.2,
+            }, "b")
+            .to(".abs", {
+                stagger: 0.16,
+                opacity: 1,
+                pointerEvents: "all",
+            }, "b");
+
+        // Pause the timeline initially
+        nvTl.pause();
+
+        // Toggle animation on button click
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            if (nvTl.reversed()) {
+                nvTl.play();
+            } else {
+                nvTl.reverse();
+            }
+        });
+
+        // Clean-up function to remove event listeners if needed
+        return () => {
+            menuBtn.removeEventListener("click");
+        };
+    });
+
+    // const headNav = document.querySelector(".head-nav")
+    // const menuBtn = document.querySelector(".menu-toggle")
+
+    // let nvTl = gsap.timeline({ paused: true, reversed: true })
+    //     .to(headNav, {
+    //         opacity: 1,
+    //         pointerEvents: "all",
+    //         duration: 0.3,
+    //     })
+    //     .from(".head-nav ul li", {
+    //         yPercent: 100,
+    //         opacity: 0,
+    //         stagger: 0.06,
+    //         duration: 0.2,
+    //     }, "b")
+    //     .to(".abs", {
+    //         stagger: 0.16,
+    //         opacity: 1,
+    //         pointerEvents: "all",
+    //     }, "b")
+    // nvTl.pause()
+    // menuBtn.addEventListener("click", () => {
+    //     menuBtn.classList.toggle("active")
+    //     if (nvTl.reversed()) {
+    //         nvTl.play();
+    //     } else {
+    //         nvTl.reverse();
+    //     }
+    // })
 }
 
 function homeAnimations() {
