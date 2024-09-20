@@ -1,8 +1,20 @@
+function checkScrollPosition() {
+    const header = document.querySelector('.site-header');
+    const scrollPosition = window.scrollY || window.pageYOffset;
+
+    if (scrollPosition > 20) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+}
+
 const lenis = new Lenis()
 
-lenis.on('scroll', (e) => {
-    // console.log(e)
-})
+lenis.on('scroll', () => {
+    ScrollTrigger.update();
+    checkScrollPosition();
+});
 
 lenis.on('scroll', ScrollTrigger.update)
 
@@ -20,6 +32,55 @@ gsap.ticker.lagSmoothing(0)
 
 Fancybox.bind("[data-fancybox]", {});
 
+
+function headerAnimations() {
+
+    const showAnim = gsap.from('.site-header', {
+        top: -100,
+        paused: true,
+        duration: 0.2
+    }).progress(1);
+
+
+    ScrollTrigger.create({
+        start: "top top",
+        end: "max",
+        onUpdate: (self) => {
+            self.direction === -1 ? showAnim.play() : showAnim.reverse();
+        }
+    });
+
+
+    const headNav = document.querySelector(".head-nav")
+    const menuBtn = document.querySelector(".menu-toggle")
+
+    let nvTl = gsap.timeline({ paused: true, reversed: true })
+        .to(headNav, {
+            opacity: 1,
+            pointerEvents: "all",
+            duration: 0.3,
+        })
+        .from(".head-nav ul li", {
+            yPercent: 100,
+            opacity: 0,
+            stagger: 0.06,
+            duration: 0.2,
+        }, "b")
+        .to(".abs", {
+            stagger: 0.16,
+            opacity: 1,
+            pointerEvents: "all",
+        }, "b")
+    nvTl.pause()
+    menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active")
+        if (nvTl.reversed()) {
+            nvTl.play();
+        } else {
+            nvTl.reverse();
+        }
+    })
+}
 
 function homeAnimations() {
     const hero = document.querySelector(".main-banner-sec")
@@ -340,6 +401,10 @@ function loadAnimations() {
     });
 }
 
+
+
+
+headerAnimations();
 homeAnimations();
 contactAnimations();
 accordions();
