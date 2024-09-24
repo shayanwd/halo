@@ -352,7 +352,7 @@
     }
 
     .cib-row {
-       grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
 
     .cib-col2 {
@@ -727,7 +727,8 @@
     }
 
     .contact-grid {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
+        gap: 60px;
     }
 
     .contact-col1 {
@@ -740,7 +741,7 @@
 
     .contact-col2 .more-questions {
         max-width: 100%;
-        min-height: 200px;
+        min-height: 240px;
     }
 
     .contact-col1 h2 {
@@ -761,6 +762,19 @@
 
     .meet-cntnt-holder {
         grid-template-columns: auto;
+    }
+
+    .mch-col2 {
+        width: auto;
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        overflow: hidden;
+    }
+
+    .video-slide-sec .mch-col2 .swiper-slide:empty {
+        display: none;
     }
 
     .mch-col1 {
@@ -786,10 +800,11 @@
 
     .fls-row {
         grid-template-columns: 1fr;
+        gap: 60px;
     }
 
     .fq-btn-grid {
-     max-width: 100%;
+        max-width: 100%;
     }
 
     .accordions-wrap {
@@ -807,7 +822,7 @@
     }
 
     .fls-c1 {
-       overflow-x: auto;
+        overflow-x: auto;
     }
 
     .fls-c1::-webkit-scrollbar {
@@ -815,8 +830,8 @@
     }
 
     .fq-btn-grid {
-       display: flex;
-       overflow-x: auto;
+        display: flex;
+        overflow-x: auto;
     }
 
     .fq-btn-grid::-webkit-scrollbar {
@@ -825,8 +840,8 @@
 
     .site-btn.btn-blocked {
         min-height: 57px;
-       width: 181px;
-       min-width: 181px;
+        width: 181px;
+        min-width: 181px;
     }
 
     .btn-blocked>svg {
@@ -873,6 +888,7 @@
 
     .work-w-row {
         grid-template-columns: 1fr;
+        gap: 60px;
     }
 
     .work-w-col1 ul li {
@@ -893,7 +909,7 @@
     }
 
     .nws-col2 form {
-       max-width: 100%;
+        max-width: 100%;
     }
 
     .reserve-row {
@@ -932,7 +948,7 @@
     }
 
     .dsg-txt-row {
-       flex-direction: column;
+        flex-direction: column;
     }
 
     .dsg-txt-cell {
@@ -968,6 +984,10 @@
 
     .prod-cells-grid {
         grid-template-columns: 1fr;
+    }
+
+    .prod-cell.large-cell {
+        grid-column: auto;
     }
 
     .package-cntnt {
@@ -1039,9 +1059,9 @@
     }
 
     .latest-news-title {
-       flex-direction: column;
-       align-items: flex-start;
-       gap: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
     }
 
     .latest-news-title h2 {
@@ -1093,7 +1113,7 @@
         font-size: 50px;
         line-height: 50px;
     }
-    
+
     .prod-banner .bcr-col2 h1 {
         font-size: 60px;
         line-height: 60px;
@@ -1103,17 +1123,22 @@
         overflow-x: hidden;
     }
 
+    .package-sec {
+        background: #000;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     .package-bg {
-        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: -1;
     }
 
     .package-main {
         position: static;
+        padding: 4.5rem 0px 0rem;
     }
 
     .mirror-col1 h2 {
@@ -1132,10 +1157,19 @@
         font-size: 40px;
     }
 
+    .pc-media {
+        aspect-ratio: 378/378;
+    }
+
+    .pc-content .pc-ico svg {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
     .pc-content .pc-txt p {
-      max-width: 100%;
-      font-size: 10px;
-      line-height: 15px;
+        max-width: 100%;
+        font-size: 10px;
+        line-height: 15px;
     }
 
     .prod-cell .pc-content {
@@ -1147,6 +1181,21 @@
         line-height: 50px;
     }
 
+    .lt-cell svg {
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    .lt-cell h3 {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .lt-cell p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
     .asc-t-top-head h2 {
         font-size: 45px;
         line-height: 45px;
@@ -1154,6 +1203,27 @@
 
     .wellness-title {
         margin-bottom: 50px;
+    }
+
+    .wws-prod-sec {
+        padding: 3.75rem 0px;
+    }
+
+    .wellness-sec {
+        padding: 3.75rem 0px;
+    }
+
+    .wellness-title h2 {
+        font-size: 45px;
+        line-height: 50px;
+    }
+
+    .wellness-sec .container-fluid {
+        gap: 25vh;
+    }
+
+    .wellness-cell {
+        border-color: #ffffff82;
     }
 
     .wellness-cell h3 {
@@ -1173,8 +1243,45 @@
         width: 65px;
     }
 
+    .app-sec {
+        padding: 3.75rem 0px;
+    }
+
+    .accordions-wrap-op {
+        padding-right: 0;
+    }
+
+    .accordion::after {
+        left: -13px;
+        right: -13px;
+    }
+
+    .dsg-txt-cell p {
+        font-size: 16px;
+    }
+
+    .design-sec {
+        padding: 0px 0px 3.75rem;
+    }
+
+    .frequent-sec {
+        padding: 0px 0px 3.75rem;
+    }
+
+    .reserve-col1 h2 {
+        padding: 10px 0px;
+        max-width: 350px;
+        line-height: 56px;
+    }
+
+    .reserve-col2 .package-col {
+        padding-bottom: 0px;
+        padding-top: 60px;
+    }
+
     .foot-anima svg {
         transform: translate(-63%, -110%) rotate(-90deg);
+        transform: translate(-85%, -110%) rotate(-90deg) scale(2.3);
     }
 }
 
