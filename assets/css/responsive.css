@@ -373,10 +373,6 @@
         line-height: 80px;
     }
 
-    .prod-banner .banner-cntnt-row {
-        grid-template-columns: 468px 237px;
-    }
-
     .mirror-col1 h2 {
         font-size: 30px;
         line-height: 30px;
@@ -426,6 +422,24 @@
     .reserve-col1 h2 {
         font-size: 100px;
         line-height: 90px;
+    }
+
+    .package-bg img {
+        aspect-ratio: 0.8333;
+    }
+
+    .package-cntnt {
+        grid-template-columns: 8fr 8fr;
+    }
+
+    .lt-cell {
+        max-width: 45%;
+    }
+}
+
+@media only screen and (min-width:800px) {
+    .tablet-show {
+        display: none;
     }
 }
 
@@ -994,6 +1008,21 @@
         grid-template-columns: 1fr;
     }
 
+    .package-main {
+        position: static;
+        padding: 4.5rem 0px 0rem;
+    }
+
+    .package-col {
+        padding-bottom: 0;
+    }
+
+    .package-sec {
+        background: #000;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     .feature-top-title h2 {
         font-size: 50px;
         line-height: 50px;
@@ -1141,6 +1170,14 @@
         padding: 4.5rem 0px 0rem;
     }
 
+    .package-col {
+        padding-bottom: 0;
+    }
+
+    .package-bg img {
+        aspect-ratio: 0.8333;
+    }
+
     .mirror-col1 h2 {
         max-width: 100%;
         font-size: 30px;
@@ -1177,8 +1214,8 @@
     }
 
     .lt-title h2 {
-        font-size: 50px;
-        line-height: 50px;
+        font-size: 40px;
+        line-height: 40px;
     }
 
     .lt-cell svg {
@@ -1268,6 +1305,16 @@
         padding: 0px 0px 3.75rem;
     }
 
+    .frq-col1 h2 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .reserve-sec {
+        background-image: url(../images/reserve-mob.avif);
+        background-position-y: 83%;
+    }
+
     .reserve-col1 h2 {
         padding: 10px 0px;
         max-width: 350px;
@@ -1277,6 +1324,15 @@
     .reserve-col2 .package-col {
         padding-bottom: 0px;
         padding-top: 60px;
+    }
+
+    .package-col ul li .p-ico b,
+    .package-col ul li p {
+        font-size: 16px;
+    }
+
+    .reserve-sec+.site-footer {
+        background: linear-gradient(90deg, #f99900, #e43e02);
     }
 
     .foot-anima svg {

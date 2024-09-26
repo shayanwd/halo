@@ -605,7 +605,7 @@ html.lenis body {
     width: 100%;
     max-width: 470px;
     padding: .625rem 0px;
-    align-items: center;
+    align-items: baseline;
     gap: 17px;
     font-size: 17px;
     line-height: 26px;
@@ -2769,6 +2769,7 @@ form .field textarea:is(:hover, :valid, :focus) {
 .lighting-bg #frame {
     width: 100%;
     height: 100%;
+    min-height: 100vh;
     background-image: url(../sequence/sec-0130.jpeg);
     background-repeat: no-repeat;
     background-position: center;

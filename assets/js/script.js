@@ -85,7 +85,12 @@ function headerAnimations() {
                 nvTl.reverse();
             }
         });
-
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' || event.key === 'Esc') {
+                menuBtn.classList.remove("active");
+                nvTl.reverse();
+            }
+        });
         return () => {
             menuBtn.removeEventListener("click");
         };
