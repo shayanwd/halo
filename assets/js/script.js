@@ -394,6 +394,12 @@ function sequence() {
 
 
         preloadImages()
+
+        document.addEventListener("DOMContentLoaded", () => {
+            lenis.scrollTo(0, { immediate: true });
+
+            ScrollTrigger.refresh();
+        });
     }
 
 }
